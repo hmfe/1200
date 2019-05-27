@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+  <head lang="en">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/main.css" />
+    <title>Pokémon</title>
+  </head>
+  <body>
+    <main>
+      <div class="container">
+        <div class="autocomplete">
+          <h1>Catch a pokémon!</h1>
+          <nav>
+            <ul>
+              <li>
+                <a alt="link to instructions">Instructions</a>
+                <ul class="orderedList">
+                  <li>1. Search for a pokémon</li>
+                  <li>2. Catch it by pressing the pokéball</li>
+                  <li>
+                    3. See base Exp and all the pokémons you've caught below
+                  </li>
+                  <li>
+                    4. Throw a pokémon by insering its name below and press the
+                    balck button
+                  </li>
+                  <li>
+                    5. Throw away all caught pokémons on the button below th
+                    pokémons
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </nav>
+          <input
+            id="pokemonInput"
+            autocomplete="off"
+            type="text"
+            name="pokémon"
+            placeholder="Type a poké name..."
+          />
+          <input
+            alt-text="button for catching pokémons"
+            type="submit"
+            onClick="caughtPoke()"
+            id="catch-button"
+            value="Catch!"
+          />
+          <button type="button" onClick="throwAway()" class="throwbutton">
+            Throw
+          </button>
+          <p id="throwPoke"></p>
+        </div>
+        <h3>You have caught:</h3>
+        <p class="headers">Name</p>
+        <p id="pokeName"></p>
+        <p class="headers">Base Exp</p>
+        <p id="baseExp"></p>
+        <p class="headers">Your pokémons:</p>
+        <p id="caughtPokes"></p>
+        <p id="date"></p>
+        <button class="throwbutton" type="button" onClick="throwAwayAll()">
+          Throw all
+        </button>
+      </div>
+    </main>
+    <script src="js/scirpts.js"></script>
+  </body>
+</html>
